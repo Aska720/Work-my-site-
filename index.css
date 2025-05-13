@@ -57,6 +57,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     width: 100vw;
 }
@@ -68,17 +69,49 @@ body {
 
 /* -------------------- HEADER --------------------- */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 3.52vh;
-    padding-bottom: 3.52vh;
+@media (min-width: 600px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 3.52vh;
+        padding-bottom: 3.52vh;
+    }
+
+    .header-left, .header-right {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.header-left, .header-right {
-    display: flex;
-    align-items: center;
+@media (max-width: 650px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 3.52vh;
+        padding-bottom: 3.52vh;
+    }
+
+    .header-left,.header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+.header-left > *, .header-right > * {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
+
+}
+
+
+
 
 .header-title {
     margin-left: 1.35vw;
@@ -101,11 +134,162 @@ header {
 
 /* --------------------- DESCRIPTION --------------- */
 
-.description {
-    margin-top: 4.35vh;
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width: 1120px) {
+
+    .description {
+        margin-top: 4.35vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .description-left {
+        padding-top: 4.26vh;
+    }
+
+    .description-price {
+        top: 28.43vh;
+        left: 6.3vw;
+    }
+
+    .intro-orange-content {
+        align-items: center;
+    }
+
+
+    .description-intro > div {
+        margin-top: 7.59vh;
+        margin-bottom: 7.59vh;
+    }
+
+    .intro-feature {
+        max-width: 13.07vh;
+    }
+
+    .intro-orange-content {
+        max-width: 30.72vw;
+    }
+
+    .collections-content {
+        margin-left: 18.75vw;
+        margin-right: 3.65vw;
 }
+    .collections-button {
+        top: 10.55vh;
+        left: 4.11vw;
+    }
+
+    .advantage {
+        max-width: 14.68vw;
+    }
+
+
+    .orange-bottom-text {
+    position: absolute;
+}
+
+   
+}
+
+@media (max-width: 1120px) {
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description-left, .description-right {
+        align-items: center;
+    }
+
+    .description-title {
+        text-align: center;
+    }
+
+    .description-menu {
+        margin: auto;
+    }
+
+    .description-menu-footer {
+        margin-top: 1vh;
+    }
+
+    .description-tap {
+        margin: auto;
+    }
+
+    .description-price {
+        top: 40%;
+        left: 30%;
+    }
+
+
+    .intro-orange-content {
+          align-items: top;
+
+    }
+
+    .description-intro > div {
+        margin-top: 2vh;
+    }
+
+    .collections {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collections-img > img {
+        max-width: 90%;
+    }
+
+    .collections-button {
+        position: relative;
+    }
+
+    .goods-items {
+        flex-direction: column;
+    }
+
+    .good {
+        align-items: center;
+    }
+
+    .advantages-items {
+        flex-direction: column;
+    }
+
+.advantage {
+    margin: 2vw;
+}
+
+.orange-bottom-text {
+    position: relative;
+}
+
+.orange-footer {
+    flex-direction: column;
+}
+
+.orange-footer-item {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+    
+}
+
+@media (max-width: 500px) {
+    .description-tap {
+        width: 90%;
+    }
+
+    .description-intro {
+        flex-direction: column!important;
+        align-items: center;
+    }
+}
+
 
 .description-price {
     top: 28.43vh;
@@ -122,13 +306,12 @@ header {
     max-width: 30.73vw;
 }
 
-.description-intro > div {
+.description-intro>div {
     margin-top: 7.59vh;
     margin-bottom: 7.59vh;
 }
 
 .description-left {
-    padding-top: 4.26vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -146,6 +329,7 @@ header {
 .description-menu-footer {
     margin-bottom: 2.96vh;
 }
+
 .description-title {
     font-size: 5.55vh;
     line-height: 5.93vh;
@@ -153,12 +337,14 @@ header {
     font-family: 'Gilroy';
 }
 
-.description-company, .description-product {
+.description-company,
+.description-product {
     margin-bottom: 2.22vh;
 }
 
 
-.description-product, .description-goods {
+.description-product,
+.description-goods {
     margin-top: 2.22vh;
 }
 
@@ -170,7 +356,8 @@ header {
 .description-menu-item {
     margin-left: 0.78vw;
 }
-.description-menu-content > span {
+
+.description-menu-content>span {
     font-size: 1.89vh;
     line-height: 1.89vh;
     margin-left: 0.78vw;
@@ -185,6 +372,7 @@ header {
     width: 31px;
     height: 2px;
 }
+
 .description-menu-footer-item:not(:first-child) {
     margin-left: 0.93vh;
 }
@@ -204,7 +392,7 @@ header {
 
 .price-button {
     font-family: 'PT Sans';
-   
+
     background-color: #FF7028;
     color: white;
 }
@@ -229,16 +417,15 @@ header {
     font-family: 'PT Sans';
     font-size: 1.6vh;
     line-height: 2.5vh;
-    max-width: 30.72vw;
     color: #151716;
 }
 
 .intro-orange-content {
     display: flex;
-    
+
 }
 
-.intro-feature-content > p {
+.intro-feature-content>p {
     max-width: 13.07vw;
 }
 
@@ -272,11 +459,11 @@ header {
     line-height: 1.85vh;
     color: #7B7B7B;
     margin-left: 1.48vw;
-   
+
 }
 
 .intro-feature-content-title {
-    color: black!important;
+    color: black !important;
     font-size: 1.48vh;
 }
 
@@ -307,7 +494,7 @@ header {
     position: relative;
 }
 
-.product > img {
+.product>img {
     max-width: 14.95vw;
     display: block;
 }
@@ -329,14 +516,13 @@ header {
     display: flex;
 }
 
-.collections > * {
+.collections>* {
     margin-left: 2vw;
 }
 
-.collections-img > img{
+.collections-img > img {
     display: block;
-
-    margin: 0 auto;
+    margin: auto;
     max-height: 61.57vh;
 }
 
@@ -344,20 +530,15 @@ header {
     position: relative;
 }
 
-.collections-button {
-    top: 10.55vh;
-    left: 4.11vw;
-}
+
 
 .collections-content {
-    margin-left: 18.75vw;
-    margin-right: 3.65vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.collections-top > p {
+.collections-top>p {
     color: #BEBEBE;
     font-family: 'PT Sans';
     font-size: 1.6vh;
@@ -366,11 +547,11 @@ header {
 
 .collections-title {
     margin-top: 6.2vh;
-    font-family: 'Gilroy'!important;
-    font-weight: 400!important;
-    font-size: 2.96vh!important;
-    line-height: 3.33vh!important;
-    color: white!important;
+    font-family: 'Gilroy' !important;
+    font-weight: 400 !important;
+    font-size: 2.96vh !important;
+    line-height: 3.33vh !important;
+    color: white !important;
 }
 
 .collections-all {
@@ -378,13 +559,13 @@ header {
     margin-bottom: 3.5vh;
 }
 
-.collections-all > span {
+.collections-all>span {
     font-family: 'PT Sans';
     font-size: 1.48vh;
     line-height: 2.22vh;
     color: #BEBEBE;
     margin-left: 0.78vw;
- 
+
 }
 
 .collections-img-title {
@@ -403,7 +584,7 @@ header {
 }
 
 .collections-button {
-  
+
     position: absolute;
 }
 
@@ -413,6 +594,7 @@ header {
     margin-top: 7.4vh;
     margin-bottom: 7.4vh;
 }
+
 .goods-title {
     font-family: 'Gilroy';
     font-weight: 400;
@@ -424,7 +606,8 @@ header {
 .goods-items {
     display: flex;
 }
-.goods-items > * {
+
+.goods-items>* {
     border: 1px solid #ECECEC;
 }
 
@@ -434,15 +617,16 @@ header {
     justify-content: space-between;
 }
 
-.good-img > img {
+.good-img>img {
     max-height: 17.4vh;
     margin: 1.85vh;
 }
 
-.good-img > .price-button {
+.good-img>.price-button {
     max-width: 3.125vw;
 }
-.good-img > span {
+
+.good-img>span {
     margin: 1.1vh;
 }
 
@@ -473,9 +657,9 @@ header {
 }
 
 .good-price-normal {
-    color: black!important;
-    font-size: 1.85vh!important;
-    line-height: 1.85vh!important;
+    color: black !important;
+    font-size: 1.85vh !important;
+    line-height: 1.85vh !important;
 
 }
 
@@ -509,10 +693,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 14.68vw;
+    
 }
 
-.advantage > img {
+.advantage>img {
     max-height: 8.3vh;
 }
 
@@ -553,14 +737,14 @@ header {
 }
 
 .orange-bottom-text {
-    position: absolute;
+   
     bottom: 0;
     left: 18.5vw;
     width: 63vw;
     background-color: #F6761A;
     text-align: center;
     color: white;
-    font-family:'Gilroy';
+    font-family: 'Gilroy';
     font-size: 2.59vh;
     line-height: 3.33vh;
     padding-top: 3.8vh;
@@ -605,7 +789,7 @@ header {
     line-height: 2.59vh;
 }
 
-.orange-footer-menu-item > span {
+.orange-footer-menu-item>span {
     margin-left: 0.78vw;
 }
 
@@ -642,7 +826,8 @@ header {
     display: flex;
     justify-content: center;
 }
-.arrow-up > img {
+
+.arrow-up>img {
     margin-top: 3.98vh;
     margin-bottom: 3.98vh;
 }
